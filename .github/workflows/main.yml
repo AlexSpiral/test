@@ -18,7 +18,9 @@ jobs:
           cache: 'npm'
 
       - name: Install Dependencies
-        run: npm install
+        run: |
+          npm install
+          npx playwright install
 
       - name: Run UI tests
         continue-on-error: true
