@@ -1,0 +1,20 @@
+{
+    "ts-node": {
+      "files": true
+    },
+    "compilerOptions": {
+      "target": "es2018",
+      "lib": ["es2018", "DOM"],
+      "esModuleInterop": true,
+      "module": "commonjs",
+      "strictNullChecks": true,
+      "types": ["codeceptjs"],
+      "skipLibCheck": true,
+      "baseUrl": ".",
+      "paths": {
+        "@all": ["index.ts"],
+        "@pages/*": ["pages/*"],
+        "@testData/*": ["test_data/*"],
+      },
+    },
+}
