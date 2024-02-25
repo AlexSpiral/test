@@ -27,6 +27,7 @@ jobs:
         run: |
           mkdir -p playwright-report
           npx playwright test
+          ls -la
 
       - name: Archive tests artifacts
         uses: actions/upload-artifact@v4
