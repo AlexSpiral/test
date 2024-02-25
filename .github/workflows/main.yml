@@ -26,9 +26,10 @@ jobs:
           mkdir -p playwright-report
           npx playwright test
 
-
-      - name: Post Link
-        id: url
-        run: echo "https://sova%2Dtest%2Dautomation%2Dreports.s3.amazonaws.com/${{ inputs.environment }}/${{ steps.date.outputs.date }}/index.html" >> "$GITHUB_STEP_SUMMARY"
-
-#      SENDGRID EMAIL NOTIFICATION if inputs.environment == 'uat'
+      - name: Archive tests artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: results-without-markdown
+          path: |
+            dist
+            !playwright-report/*.thml
