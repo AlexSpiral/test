@@ -22,7 +22,7 @@ jobs:
 
       - name: Run UI tests
         continue-on-error: true
-        run:
+        run: |
           mkdir -p playwright-report
           npx playwright test
 
