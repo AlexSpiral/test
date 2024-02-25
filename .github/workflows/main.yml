@@ -33,4 +33,4 @@ jobs:
         with:
           name: results-without-markdown
           path:
-            playwright-report/*.thml
+            playwright-report/*.html
